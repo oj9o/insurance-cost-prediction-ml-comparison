@@ -1,106 +1,116 @@
-# insurance-cost-prediction-ml-comparison
-Machine learning project comparing Linear Regression and Random Forest models to predict medical insurance charges using R.
-Predicting Insurance Charges Using Machine Learning
+# Predicting Insurance Charges Using Machine Learning
 
-Project Overview
+Machine Learning project comparing **Linear Regression** and **Random Forest Regression** models to predict medical insurance charges using **R**.
 
-This project investigates the factors that influence medical insurance charges and compares the performance of two machine learning regression models:
+---
 
-* Linear Regression
-* Random Forest Regression
+# Project Overview
 
-The objective was to identify the most influential variables affecting insurance costs and determine which model provides the most accurate predictions.
+![Project Cover](Pr1.png)
 
-⸻
+This project investigates the factors that influence medical insurance charges and compares two machine learning regression models to determine which provides the most accurate predictions.
 
-Business Problem
+The objective was to:
 
-Medical insurance costs vary significantly between individuals. This project aims to answer two key questions:
+- Identify the variables that have the greatest impact on insurance charges.
+- Compare Linear Regression and Random Forest performance.
+- Evaluate prediction accuracy using MAE, RMSE, and R².
+
+---
+
+# Business Problem
+
+![Business Problem](Pr2.png)
+
+Medical insurance costs vary significantly between individuals.
+
+This project answers two key questions:
 
 1. Which factors have the greatest impact on insurance charges?
-2. Which machine learning model predicts insurance charges more accurately?
+2. Which machine learning model predicts insurance charges most accurately?
 
-⸻
+### Dataset
 
-Dataset
+- **1,338 observations**
+- **7 variables**
+- **No missing values**
 
-The project uses the Medical Cost Personal Dataset containing:
+**Features**
 
-* 1,338 observations
-* 7 variables
+- Age
+- Sex
+- BMI
+- Children
+- Smoker
+- Region
 
-Features
+**Target Variable**
 
-* Age
-* Sex
-* BMI
-* Children
-* Smoker
-* Region
+- Insurance Charges
 
-Target Variable
+---
 
-* Insurance Charges
+# Data Exploration
 
-⸻
+Before building the models, exploratory data analysis (EDA) was performed to better understand the dataset.
 
-Data Exploration
+### Key Findings
 
-Before building the models, exploratory data analysis (EDA) was performed to understand the dataset and identify important patterns.
+- No missing values were found.
+- Insurance charges are right-skewed.
+- Smokers generally have much higher insurance charges.
+- Insurance costs increase with age.
 
-Key findings include:
+---
 
-* No missing values were found.
-* Insurance charges are right-skewed.
-* Smokers generally have much higher insurance charges.
-* Insurance costs tend to increase with age.
-
-⸻
-
-Data Preparation
+# Data Preparation
 
 The dataset was prepared by:
 
-* Converting categorical variables into factors.
-* Splitting the data into:
-    * 80% Training Set
-    * 20% Testing Set
+- Converting categorical variables into factors.
+- Splitting the data into:
+  - **80% Training Set**
+  - **20% Testing Set**
 
-This ensured that model performance was evaluated on unseen data.
+This ensured that both models were evaluated using unseen data.
 
-⸻
+---
 
-Models Developed
+# Models Developed
 
-1. Linear Regression
+## 1. Linear Regression
 
-A Linear Regression model was used as the baseline model.
+The first model was a Linear Regression model, used as the baseline.
 
-Performance:
+### Performance
 
-* MAE: 3940.185
-* RMSE: 5763.385
-* R²: 0.734
+| Metric | Value |
+|--------|------:|
+| MAE | 3940.185 |
+| RMSE | 5763.385 |
+| R² | 0.734 |
 
-Key findings:
+### Key Findings
 
-* Smoking had the strongest positive effect on insurance charges.
-* BMI and age were significant predictors.
-* Sex and region had relatively little influence.
+- Smoking had the strongest positive effect.
+- BMI and Age were also significant.
+- Sex and Region showed relatively small influence.
 
-⸻
+---
 
-2. Random Forest Regression
+## 2. Random Forest Regression
 
-A Random Forest model was trained to capture more complex and non-linear relationships.
+Random Forest was trained to capture more complex and non-linear relationships.
 
-Performance:
+### Performance
 
-* MAE: 2801.824
-* RMSE: 4396.833
-* R²: 0.849
+| Metric | Value |
+|--------|------:|
+| MAE | 2801.824 |
+| RMSE | 4396.833 |
+| R² | **0.849** |
 
-Feature Importance:
+### Feature Importance
 
 1. Smoker
 2. Age
@@ -109,53 +119,48 @@ Feature Importance:
 5. Region
 6. Sex
 
-⸻
+---
 
-Model Comparison
+# Results
 
-Model	MAE	RMSE	R²
-Linear Regression	3940.185	5763.385	0.734
-Random Forest	2801.824	4396.833	0.849
+![Model Comparison](Pr4.png)
 
-⸻
+## Model Performance
 
-Results
+| Model | MAE | RMSE | R² |
+|------|------:|------:|------:|
+| Linear Regression | 3940.185 | 5763.385 | 0.734 |
+| Random Forest | **2801.824** | **4396.833** | **0.849** |
 
-The Random Forest model achieved the best overall performance.
+### Final Conclusion
+
+The **Random Forest** model achieved the best overall performance.
 
 Compared with Linear Regression, it produced:
 
-* Lower prediction error (MAE)
-* Lower prediction error (RMSE)
-* Higher R² value
+- Lower MAE
+- Lower RMSE
+- Higher R²
+- Better predictive accuracy
 
-The analysis also identified smoking as the strongest predictor of insurance charges, followed by age and BMI.
+The analysis also identified **Smoking** as the strongest predictor of insurance charges, followed by **Age** and **BMI**.
 
-⸻
+---
 
-Technologies Used
+# Technologies Used
 
-* R
-* Machine Learning
-* Linear Regression
-* Random Forest
-* Data Visualization
-* Exploratory Data Analysis (EDA)
+- R
+- Machine Learning
+- Linear Regression
+- Random Forest
+- Data Visualization
+- Exploratory Data Analysis (EDA)
 
-⸻
+---
 
-Repository Contents
+# Author
 
-* Mouza_AlDarmaki_Insurance_Charges_ML_Project.ipynb – Complete project notebook
-* Presentation.pdf – Project presentation
-* insurance.csv – Dataset
-* README.md – Project documentation
-
-⸻
-
-Author
-
-Mouza AlDarmaki
+**Mouza AlDarmaki**
 
 Business Analytics Track
 
